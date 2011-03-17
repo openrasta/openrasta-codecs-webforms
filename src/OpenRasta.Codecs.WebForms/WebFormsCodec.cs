@@ -171,8 +171,8 @@ namespace OpenRasta.Codecs.WebForms
         {
             var httpHandler = target as IHttpHandler;
 
-            var targetEncoding = Encoding.UTF8;
-            response.ContentType.CharSet = targetEncoding.HeaderName;
+            var targetEncoding = new UTF8Encoding(false);
+            response.ContentType.CharSet = "utf-8";
             TextWriter writer = null;
             var isDisposable = target as IDisposable;
             bool ownsWriter = false;
@@ -185,6 +185,7 @@ namespace OpenRasta.Codecs.WebForms
                 else
                 {
                     writer = new DeterministicStreamWriter(response.Stream, targetEncoding, StreamActionOnDispose.None);
+                   
                     ownsWriter = true;
                 }
                 if (target is UserControl)
