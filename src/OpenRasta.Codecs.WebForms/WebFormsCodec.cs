@@ -172,7 +172,7 @@ namespace OpenRasta.Codecs.WebForms
             var httpHandler = target as IHttpHandler;
 
             var targetEncoding = new UTF8Encoding(false);
-            response.ContentType.CharSet = "utf-8";
+            response.ContentType = new MediaType(response.ContentType.TopLevelMediaType + "/" + response.ContentType.Subtype + ";charset=utf-8");
             TextWriter writer = null;
             var isDisposable = target as IDisposable;
             bool ownsWriter = false;
