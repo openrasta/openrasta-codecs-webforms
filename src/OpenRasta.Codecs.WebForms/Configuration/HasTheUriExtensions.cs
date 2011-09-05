@@ -27,7 +27,7 @@ namespace OpenRasta.Configuration
             var resourceModel = new ResourceModel
                 {
                     Uris = { uriModel }, 
-                    Handlers = { new ReflectionBasedTypeSystem().FromClr<WebFormsDefaultHandler>() }
+                    Handlers = { new HandlerModel(new ReflectionBasedTypeSystem().FromClr<WebFormsDefaultHandler>()) }
                 };
             target.Repository.ResourceRegistrations.Add(resourceModel);
             return new HasTheUri(resourceModel, uriModel);
