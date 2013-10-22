@@ -1,3 +1,0 @@
-﻿name: openrasta-codecs-webforms
-depends: openwrap anchored content
-depends: openrasta-core
