@@ -8,14 +8,12 @@
  */
 #endregion
 
-using OpenRasta.Codecs.WebForms;
-using OpenRasta.Codecs.WebForms.Configuration;
 using OpenRasta.Configuration.Fluent;
 using OpenRasta.Configuration.MetaModel;
 using OpenRasta.TypeSystem;
 using OpenRasta.TypeSystem.ReflectionBased;
 
-namespace OpenRasta.Configuration
+namespace OpenRasta.Codecs.WebForms.Configuration
 {
     public static class HasTheUriExtensions
     {
@@ -27,7 +25,7 @@ namespace OpenRasta.Configuration
             var resourceModel = new ResourceModel
                 {
                     Uris = { uriModel }, 
-                    Handlers = { new ReflectionBasedTypeSystem().FromClr<WebFormsDefaultHandler>() }
+                    Handlers = { new HandlerModel(new ReflectionBasedTypeSystem().FromClr<WebFormsDefaultHandler>()) }
                 };
             target.Repository.ResourceRegistrations.Add(resourceModel);
             return new HasTheUri(resourceModel, uriModel);

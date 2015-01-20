@@ -31,25 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\nunit-2.6.3\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="OpenRasta">
-      <HintPath>..\..\lib\openrasta-core-2.1.0.53141187\bin-net35\OpenRasta.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenRasta.Testing, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="OpenRasta, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\openrasta-testing-2.0.4.0\OpenRasta.Testing.dll</HintPath>
+      <HintPath>..\packages\openrasta-core.2.5.42\lib\net40\OpenRasta.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenRasta.Testing, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\openrasta-testing.2.5.42\lib\net40\OpenRasta.Testing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageParser_Specification.cs" />
@@ -57,10 +53,17 @@
     <Compile Include="WebFromsCodec_Specification.cs" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\OpenRasta.Codecs.WebForms\OpenRasta.Codecs.WebForms.csproj">
       <Project>{1f2332e4-0e6b-4da4-830d-3d3b8dbcf508}</Project>
       <Name>OpenRasta.Codecs.WebForms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
