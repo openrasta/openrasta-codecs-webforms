@@ -66,6 +66,7 @@
     <Compile Include="XHtmlProducer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OpenRasta.Codecs.WebForms.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

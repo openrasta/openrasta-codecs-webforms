@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRasta.Codecs.WebForms", "OpenRasta.Codecs.WebForms\OpenRasta.Codecs.WebForms.csproj", "{1F2332E4-0E6B-4DA4-830D-3D3B8DBCF508}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRasta.Codecs.WebForms.Tests.Unit", "OpenRasta.Codecs.WebForms.Tests.Unit\OpenRasta.Codecs.WebForms.Tests.Unit.csproj", "{A38D9A2F-BB7E-4CFD-B14F-986D6DEDE1AD}"
